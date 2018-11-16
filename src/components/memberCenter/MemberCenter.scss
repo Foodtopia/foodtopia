@@ -1,0 +1,31 @@
+$mainColor : #FF4343;
+
+.centerWrap {
+    background: #E8E8E8;
+    width: 250px;
+    height: 550px;
+    font-family: '微軟正黑體';
+    color: #707070;
+    user-select: none;
+    h3 {
+        color:$mainColor;
+        border-bottom: 1px solid #FF4343;
+    }
+    ul {
+        padding-left: 0;
+        li {
+            list-style-type: none;
+            padding: 10px 0;
+        }
+    }
+    .a {
+        color: #707070;
+    }
+    .a:hover {
+        text-decoration: none;
+    }
+    .active {
+        font-weight: 600;
+        
+    }
+}

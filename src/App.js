@@ -11,6 +11,12 @@ import Recommend from './components/recommend/recommend.js';
 import Day_rank from './components/rank/day_rank.js';
 import Product_slider from './components/product_slider/product_slider.js';
 import Product_slider_right from './components/product_slider/product_slider_right.js';
+import Nav from "./components/nav/Nav.js";
+import Register from './components/register/Register.js';
+import RegisterSuccessful from './components/registerSuccessful/RegisterSuccessful.js';
+import MemberCenter from './components/memberCenter/MemberCenter.js';
+import BasicInfo from './components/basicInfo/BasicInfo.js';
+
 
 class App extends Component {
   render() {
@@ -32,6 +38,12 @@ class App extends Component {
           </div>
           <div className="product_slider">
             <Product_slider/>
+          <Route path="/register" component={Register} />
+          <Route path="/registerSuccessful" component={RegisterSuccessful} />
+          <div className="container d-flex">
+            <Route path="/memberCenter" component={MemberCenter} />
+            <Route path="/memberCenter/BasicInfo" component={BasicInfo} />
+          </div>
           </div>
         </React.Fragment>
       </BrowserRouter>

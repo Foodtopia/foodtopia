@@ -1,0 +1,41 @@
+$mainColor : #FF4343;
+
+nav {
+    font-family: '微軟正黑體';
+    user-select: none;
+
+    .navbar-brand {
+        font-weight: 600 !important;
+        font-size: 1.5em !important;
+    }
+    .navbar-toggler {
+        border: 0px solid $mainColor !important;
+        border-radius: 50% !important;
+        padding: 5px;
+        .navbar-toggler-icon{
+            color: $mainColor !important;
+        }
+    }
+    li {
+        margin-left:35px; 
+        font-size: .9em;
+    }
+    a {
+        color : $mainColor !important;
+    }
+    img {
+        width: 1.5em;
+        margin-right: 20px;
+        cursor: pointer;
+    }
+   
+    form {
+        input {
+            border: 1px solid $mainColor !important;
+            border-radius: 20px !important;
+        }
+        img {
+            transform: translateX(-50px);
+        }
+    }
+} 
