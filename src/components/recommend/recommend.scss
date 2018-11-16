@@ -1,0 +1,23 @@
+$color_red: #FF4343;
+$color_grey: #404040;
+body{
+    font-family: '微軟正黑體';
+}
+.recm_wrap{
+    margin: 10px 20px;
+}
+.recm_title{
+    font-size: 2rem;
+    // line-height: 5rem;
+    margin: 10px 0;
+    font-weight: 700;
+    color: $color_grey;
+}
+.recipe_wrap{
+    img{
+        width: 500px;
+        // height: 200px;
+        cursor: pointer;
+    }
+    
+}

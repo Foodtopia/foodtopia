@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -29,4 +29,11 @@
   to {
     transform: rotate(360deg);
   }
+} */
+.middle_section{
+  margin-top: 50px;
+}
+.product_slider{
+  margin: 20px 0;
+  /* border: 1px solid black; */
 }
