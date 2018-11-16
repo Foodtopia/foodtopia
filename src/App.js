@@ -11,7 +11,6 @@ import Recommend from './components/recommend/recommend.js';
 import Day_rank from './components/rank/day_rank.js';
 import Product_slider from './components/product_slider/product_slider.js';
 import Product_slider_right from './components/product_slider/product_slider_right.js';
-import Nav from "./components/nav/Nav.js";
 import Register from './components/register/Register.js';
 import RegisterSuccessful from './components/registerSuccessful/RegisterSuccessful.js';
 import MemberCenter from './components/memberCenter/MemberCenter.js';
