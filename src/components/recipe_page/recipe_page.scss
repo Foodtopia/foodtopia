@@ -1,20 +1,69 @@
+$color_red: #FF4343;
+$color_grey: #404040;
+$color_light_grey: #c7c7c7;
+
+$title_size1: 2rem;
+$title_size2: 1.5rem;
+$p_size: 1.25rem;
+
+$title_fontWeight: 700;
+
 .head_bg{
     width: 100%;
     height: 500px;
     background-color: #eeeeee;
-    .main_pic{
-        // width: 200px;
-        height: 300px;
-    } 
-    .cook_info{
-        width: 100px;
-        height: 100px;
-        border-radius: 50%;
-        background-color: #fff;
-        .time{
-            width: 60px;
-            
+    header{
+        // margin: 20px ;
+        .main_pic{
+            // width: 200px;
+            height: 300px;
+            margin: 20px 0;
+        } 
+        .main_text{
+            margin: 20px;
+            h1{
+                line-height: 5rem;
+            }
+            .cook_info{
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
+                background-color: #fff;
+                color: $color_red;
+                margin: 10px;
+                .info_icon{
+                    width: 55px;
+                    display: block;
+                    transform: translate(40%, 0);
+                    margin-top: 7px;
+                    margin-bottom: 5px;
+                }
+                h3{
+                    text-align: center;
+                }
+            }
         }
+    }
+}
+
+.ingredients_wrap{
+    width: 500px;
+    height: 500px;
+    border: 1px solid $color_light_grey;
+    border-radius: 15px;
+    background-color: #fff;
+    position: absolute;
+    top: 420px;
+    .ingredient{
+        .i_text{
+            h5{
+                margin-top:20px;
+            }
+        }
+    }
+    .ingredient_pic{
+        width: 70px;
+        height: 70px;
     }
 }
 
