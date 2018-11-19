@@ -6,16 +6,12 @@ import "./App.css";
 
 import Nav from "./components/nav/Nav.js";
 import Loginform from './components/logInform/Loginform.js';
-import Head_slider from './components/head_slider/head_slider.js';
-import Recommend from './components/recommend/recommend.js';
-import Day_rank from './components/rank/day_rank.js';
-import Product_slider from './components/product_slider/product_slider.js';
-import Product_slider_right from './components/product_slider/product_slider_right.js';
-import Nav from "./components/nav/Nav.js";
 import Register from './components/register/Register.js';
 import RegisterSuccessful from './components/registerSuccessful/RegisterSuccessful.js';
 import MemberCenter from './components/memberCenter/MemberCenter.js';
 import BasicInfo from './components/basicInfo/BasicInfo.js';
+import Recipe_list from './components/recipe_list/recipe_list.js';
+import Recipe_page from './components/recipe_page/recipe_page';
 
 
 class App extends Component {
@@ -24,26 +20,14 @@ class App extends Component {
       <BrowserRouter>
         <React.Fragment>
           <Nav />
+          <Route path="/recipe_list" component={Recipe_list} />
+          <Route path="/recipe_page" component={Recipe_page} />
           <Loginform />
-          <Head_slider />
-          <div className="middle_section container d-flex justify-content-center">
-            <Recommend />
-            <Day_rank />
-          </div>
-          <div className="product_slider">
-            <Product_slider/>
-          </div>
-          <div className="product_slider">
-            <Product_slider_right/>
-          </div>
-          <div className="product_slider">
-            <Product_slider/>
           <Route path="/register" component={Register} />
           <Route path="/registerSuccessful" component={RegisterSuccessful} />
           <div className="container d-flex">
             <Route path="/memberCenter" component={MemberCenter} />
             <Route path="/memberCenter/BasicInfo" component={BasicInfo} />
-          </div>
           </div>
         </React.Fragment>
       </BrowserRouter>

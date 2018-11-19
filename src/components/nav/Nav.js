@@ -30,13 +30,13 @@ class Nav extends Component {
                   <Link class="nav-link" to="/">首頁<span class="sr-only">(current)</span></Link>
                 </li>
                 <li className="nav-item">
-                  <Link class="nav-link" to="/">美味食譜</Link>
+                  <Link class="nav-link" to="/recipe_list">美味食譜</Link>
                 </li>
                 <li className="nav-item">
                   <Link class="nav-link" to="/">生鮮食材</Link>
                 </li>
                 <li className="nav-item">
-                  <Link class="nav-link" to="/">關於我們</Link>
+                  <Link class="nav-link" to="/recipe_page">關於我們</Link>
                 </li>
 
               </ul>
