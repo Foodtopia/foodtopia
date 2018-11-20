@@ -27,16 +27,16 @@ class Nav extends Component {
             <div className="collapse navbar-collapse" id="navbarSupportedContent">
               <ul className="navbar-nav mr-auto">
                 <li className="nav-item active">
-                  <Link class="nav-link" to="/">首頁<span class="sr-only">(current)</span></Link>
+                  <Link className="nav-link" to="/">首頁<span className="sr-only">(current)</span></Link>
                 </li>
                 <li className="nav-item">
-                  <Link class="nav-link" to="/recipe_list">美味食譜</Link>
+                  <Link className="nav-link" to="/recipe_list">美味食譜</Link>
                 </li>
                 <li className="nav-item">
-                  <Link class="nav-link" to="/">生鮮食材</Link>
+                  <Link className="nav-link" to="/">生鮮食材</Link>
                 </li>
                 <li className="nav-item">
-                  <Link class="nav-link" to="/recipe_page">關於我們</Link>
+                  <Link className="nav-link" to="/recipe_page">關於我們</Link>
                 </li>
 
               </ul>

@@ -15,8 +15,8 @@ class Loginform extends Component {
     render() {
         return (
             <React.Fragment>
-                <div id='lightBox' class="lightBox">
-                    <div id='close' class='close' onClick={this.clickHandler}>×</div>
+                <div id='lightBox' className="lightBox">
+                    <div id='close' className='close' onClick={this.clickHandler}>×</div>
 
 
                     {/* form */}
@@ -24,20 +24,20 @@ class Loginform extends Component {
                         <div>
                             <img src={require('./images/steakPlated.png')} />
                         </div>
-                        <div class="formPattern" style={{ width: '300px' }}>
+                        <div className="formPattern" style={{ width: '300px' }}>
                             <h3 className='pb-4'>會員登入</h3>
                             <form>
-                                <div class="form-group d-flex justify-content-between py-1">
+                                <div className="form-group d-flex justify-content-between py-1">
                                     <label>信箱</label>
-                                    <input type="email" class="form-control w-75" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="請輸入信箱" />
+                                    <input type="email" className="form-control w-75" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="請輸入信箱" />
                                 </div>
-                                <div class="form-group d-flex justify-content-between py-1">
+                                <div className="form-group d-flex justify-content-between py-1">
                                     <label>密碼</label>
-                                    <input type="password" class="form-control w-75" id="exampleInputPassword1" placeholder="請輸入密碼" />
+                                    <input type="password" className="form-control w-75" id="exampleInputPassword1" placeholder="請輸入密碼" />
                                 </div>
-                                <button type="submit" class="btn btn-primary w-100 py-1">登入</button>
+                                <button type="submit" className="btn btn-primary w-100 py-1">登入</button>
                                 <hr/>
-                                <button type="submit" class="btn btn-primary w-100">註冊</button>
+                                <button type="submit" className="btn btn-primary w-100">註冊</button>
                             </form>
                         </div>
                     </div>

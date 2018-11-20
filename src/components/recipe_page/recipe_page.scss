@@ -8,9 +8,12 @@ $p_size: 1.25rem;
 
 $title_fontWeight: 700;
 
+.body{
+    position: relative;
+}
 .head_bg{
     width: 100%;
-    height: 500px;
+    height: 350px;
     background-color: #eeeeee;
     header{
         // margin: 20px ;
@@ -43,27 +46,146 @@ $title_fontWeight: 700;
                 }
             }
         }
-    }
-}
-
-.ingredients_wrap{
-    width: 500px;
-    height: 500px;
-    border: 1px solid $color_light_grey;
-    border-radius: 15px;
-    background-color: #fff;
-    position: absolute;
-    top: 420px;
-    .ingredient{
-        .i_text{
-            h5{
-                margin-top:20px;
+        .nutrition_table{
+            width: 660px;
+            margin: 30px 0;
+            .n_th{
+                font-size: 14px;
+                text-align: center;
+                background-color: #adadad;
+            }
+            td{
+                font-size: 12px;
+                text-align: center;
+                background-color: #fff;
             }
         }
     }
-    .ingredient_pic{
-        width: 70px;
-        height: 70px;
-    }
 }
+.middle_section{
+    // display: flex;
+    // justify-content: space-around;
+    // width: 1900px;
+    // position: absolute;
+    // top: 420px;
+    // left: 5%;
+    margin-top: 0;
+    
+    .ingredients_wrap{
+        // display: none;
+        max-width: 500px; 
+        // height: 500px;
+        // border: 1px solid $color_light_grey;
+        // border-radius: 15px;
+        background-color: #fff;
+        // position: absolute;
+        // top: 420px;
+        padding: 20px;
+        .i_title{
+            // margin: 20px 0 10px 20px;  
+            line-height: 40px;
+            
+        }
+        .ingredient{
+            width: 200px;
+            // margin: 10px 0 0px 10px;
+            .i_text{
+                h5{
+                    margin-top:20px;
+                }
+            }
+        }
+        .ingredient_pic{
+            width: 70px;
+            height: 70px;
+        }
+    }
+    .add2cart{
+        width: 300px;
+        height: 200px;
+        border: 1px solid #ff9012;
+        padding: 20px;
+        text-align: center;
+        margin-top: 100px;
+        h1, h4, div{
+            margin: 10px;
+        }
+        .btn{
+            font-size: 16px;
+        }
+    }
+    
+}
+.step{
+    .step_num{
+        font-size: 70px;
+        font-weight: 700;
+        margin: 10px;
+        color: $color_red;
+    }
+    .step_pic {
+        margin: 10px;
+        img{
+            width: 250px;
+        }
+    }    
+    .detail{
+        width: 400px;
+        height: 200px;
+        font-size: 16px;
+        margin: 10px;
+        }
+
+}
+
+.author_wrap{
+    // margin: 20px 50px;
+    padding: 20px;
+    // background-color:  $color_light_grey;
+    border: 1px solid $color_light_grey;
+    border-radius: 5px;
+    .profile_pic{
+        width: 100px;
+        height: 100px;
+        
+    }
+    .author_text{
+        margin: 20px;
+        .author_name{
+            font-size: $title_size2;
+            font-weight: $title_fontWeight;
+            // margin-top: 20px;
+        }
+        .author_intro{
+            font-size: $p_size;
+            // margin: 5px 0;
+        }
+    }
+    
+}
+
+.comment_wrap{
+    margin-top: 50px;
+    .profile_pic{
+        width: 60px;
+        height: 60px;
+    }
+    .comment_area{
+        margin: 10px;
+        .user_name{
+            font-size: $title_size2;
+            font-weight: 700;
+            margin-right: 20px;
+        }
+        .comment_text{
+            font-size: $p_size;
+            margin: 10px 0;
+            // border: 1px solid #000;
+            // width: 300px;
+            // height: 200px;
+        }
+    }
+    
+}
+
 
