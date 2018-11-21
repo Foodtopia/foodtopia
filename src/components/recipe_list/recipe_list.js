@@ -18,7 +18,7 @@ class Recipe_list extends Component {
     return (
       <BrowserRouter>
         <React.Fragment>
-          <div className="fadeIn">
+          <div className="fadeIn head_slider">
             <Head_slider />   
           </div>
           

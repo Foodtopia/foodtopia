@@ -60,6 +60,23 @@ $title_fontWeight: 700;
         .lower_card{
             padding: 10px;
             position: relative;
+            .card_title{
+                line-height: 3rem;
+            }
+            .card_text{
+                // color: blue;
+                // border: 1px solid #000;
+                height: 70px;
+                line-height: 2.2rem;
+                // 多行省略無法執行?
+                overflow: hidden;
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 3;   
+                // 單行省略可以
+                // text-overflow : ellipsis;
+                // white-space : nowrap;              
+            }
             .like_btn{
                 height: 20px;
                 position: absolute;

@@ -3,9 +3,9 @@ body{
   height: 300vh;
 }
 .wrapper{
-  width: 650px;
+  width: 654px;
   /* margin: 0 auto; */
-  height: 400px;
+  height: 430px;
   background: rgb(177, 177, 177);
   overflow: hidden;
 }
@@ -17,8 +17,8 @@ body{
 }
 /* 原本沒有設li高度的時候照片會超出範圍 */
 .slider_wrap li{
-  height: 400px;
-  width: 800px;
+  height: 430px;
+  width: 654px;
 }
 .slider_wrap li img{
   width: 100%;
@@ -57,6 +57,7 @@ body{
   justify-content: center;
   align-items: center; */
   opacity: .5;
+  color: $mainColor;
 }
 .arrow_area:hover{
   opacity: 1;
