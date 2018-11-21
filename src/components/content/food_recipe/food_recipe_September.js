@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import $ from 'jquery';
 
 
-class Food_recipe extends Component {
+class Food_recipe_September extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -190,4 +190,4 @@ paging = e => {  //顯示頁數資料
     }
 }
 
-export default Food_recipe;
+export default Food_recipe_September;

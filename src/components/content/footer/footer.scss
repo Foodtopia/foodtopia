@@ -30,6 +30,7 @@
         }
     }
     .blog_footer_icon{
+        position: relative;
         width: 60%;
         margin: 0 auto;
         .footer_icon{
@@ -39,6 +40,21 @@
                 margin: 0;
                 font-size: 30px;
             }
+            .link_black{
+                color: black;
+            }
+        }
+        .set_up_button{
+            position: absolute;
+            bottom: 0px;
+            right: 17.5%;
+            background-color: #F53643;
+        }
+    }
+    .input_br{
+        margin-top: 10px;
+        .input{
+            width: 70%;
         }
     }
 }
