@@ -63,17 +63,20 @@ btnNextClick = () => {
 }
 
 componentDidMount() {
-    this.getProducts(1);  //顯示頁面1
+    this.getProducts(1);  //顯示頁面1    componentDidMount -> 如果需要從遠程端點加載數據，實例化網絡請求
 }
 
-// componentDidUpdate() {  //頁面按鈕顯示狀態(無效果)
-//     $(".page_text_button .page_button .active").removeClass('active');
-//     $('.page_text_button .page_button#'+this.state.currentPage).addClass('active');
-// }
+componentDidUpdate() {  //頁面按鈕顯示狀態   componentDidUpdate -> 更新發生後立即調用
+    $(".page_button.active").removeClass('active');
+    $('.page_button#'+this.state.currentPage).addClass('active');
+}
 
-paging = e => {  //?
+paging = e => {  //顯示頁數資料
     e.preventDefault();
     this.getProducts($(e.target).text())
+    $(this).parent().addClass('active');
+    $(this).parent().siblings().removeClass('active');
+    
 }
 
   getProducts(page) {
@@ -119,7 +122,7 @@ paging = e => {  //?
         const renderPageNumbers = pageNumbers.map(number => {
             if (number === 1 && currentPage === 1) {
                 return (
-                  <div key={number} className='page_button' id={number}><a href='javascript:void(0)' className="page_text_button" id={number} onClick={this.paging}><p>{number}</p></a></div>
+                  <div key={number} className='page_button active' id={number}><a href='javascript:void(0)' className="page_text_button" id={number} onClick={this.paging}><p>{number}</p></a></div>
                 )
               }
               else if ((number < upperPageBound + 1) && number > lowerPageBound) {
