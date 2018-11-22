@@ -12,6 +12,7 @@ import MemberCenter from './components/memberCenter/MemberCenter.js';
 import BasicInfo from './components/basicInfo/BasicInfo.js';
 import Recipe_list from './components/recipe_list/recipe_list.js';
 import Recipe_page from './components/recipe_page/recipe_page';
+import Recipe_category from './components/recipe_category/recipe_category';
 
 
 class App extends Component {
@@ -29,6 +30,8 @@ class App extends Component {
             <Route path="/memberCenter" component={MemberCenter} />
             <Route path="/memberCenter/BasicInfo" component={BasicInfo} />
           </div>
+          <Recipe_category/>
+          <Route path="/recipe_category" component={Recipe_category} />
         </React.Fragment>
       </BrowserRouter>
     );
