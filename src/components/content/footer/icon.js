@@ -45,24 +45,22 @@ class Icon extends Component {
         }
         return null;
     }
-    
 
     render() {
-        
         return (
             <React.Fragment>
                 <div className="blog_footer_icon container d-flex">
-                        <div className="footer_icon d-flex justify-content-between">
-                            <a className="link_black" href={(`${this.state.facebook}`)}><i class="icon fab fa-facebook col-2"></i></a>
-                            <a className="link_black" href={(`${this.state.instagram}`)}><i class="icon fab fa-instagram col-2"></i></a>
-                            <a className="link_black" href={(`${this.state.google_plus}`)}><i class="icon fab fa-google-plus-g col-2"></i></a>
-                            <a className="link_black" href={(`${this.state.youtube}`)}><i class="icon fab fa-youtube col-2"></i></a>
-                            <a className="link_black" href={(`${this.state.email}`)}><i class="icon far fa-envelope col-2"></i></a>
-                        </div>
-                        <button type="button" className="btn btn-primary set_up_button" data-toggle="modal" data-target="#exampleModal">
-                            設定
-                        </button>
+                    <div className="footer_icon d-flex justify-content-between">
+                        <a className="link_black" href={(`${this.state.facebook}`)}><i class="icon fab fa-facebook col-2"></i></a>
+                        <a className="link_black" href={(`${this.state.instagram}`)}><i class="icon fab fa-instagram col-2"></i></a>
+                        <a className="link_black" href={(`${this.state.google_plus}`)}><i class="icon fab fa-google-plus-g col-2"></i></a>
+                        <a className="link_black" href={(`${this.state.youtube}`)}><i class="icon fab fa-youtube col-2"></i></a>
+                        <a className="link_black" href={(`${this.state.email}`)}><i class="icon far fa-envelope col-2"></i></a>
                     </div>
+                    <button type="button" className="btn btn-primary set_up_button" data-toggle="modal" data-target="#exampleModal">
+                        設定
+                    </button>
+                </div>
                 {/* 更動icon連結的Modal */}
                 <div className="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div className="modal-dialog" role="document">

@@ -35,6 +35,7 @@ class Footer extends Component {
         this.getuploads();  
         this.getMembers();
     }
+    
     //月份 map function
     getuploads(){
         fetch("http://localhost:3000/upload/upload_date/")

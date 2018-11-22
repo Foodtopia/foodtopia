@@ -30,7 +30,6 @@ class Content extends Component {
             inputValue: '使用者の廚房',
             inputValue2: '歡迎來到我的廚房，一起來做美食吧!',
         }
-
     }
 
     componentDidMount() {
@@ -75,7 +74,6 @@ class Content extends Component {
                         <Food_recipe2 uploads={this.state.uploads}/>{/* 食譜分頁顯示 */}
                         <Footer updates={this.state.updates} month={this.month} />{/* footer分類 */}
                     </div>
-
                 </React.Fragment>
             </BrowserRouter>
         );

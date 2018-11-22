@@ -76,7 +76,7 @@ paging = e => {  //顯示頁數資料
     this.getProducts($(e.target).text())
 }
 
-  getProducts(page) {
+getProducts(page) {
     fetch("http://localhost:3000/foodtopia/menu/" + page)
       .then(res => res.json())
       .then(menu => {
@@ -102,9 +102,9 @@ paging = e => {  //顯示頁數資料
           this.setState({ isPrevBtnActive: '' });
         }
 
-      })
+    })
 
-  }
+}
 
     render() {
         const { totalPage, currentPage, perPage, upperPageBound, lowerPageBound, isPrevBtnActive, isNextBtnActive } = this.state;

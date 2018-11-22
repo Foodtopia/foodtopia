@@ -12,7 +12,6 @@ class Preface extends Component {
         inputValue2: '歡迎來到我的廚房，一起來做美食吧!',
         selectedFile:null,
     }
-    
 }
 
 updateInputValue = (evt) => {
