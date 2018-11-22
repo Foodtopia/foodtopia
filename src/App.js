@@ -31,7 +31,9 @@ class App extends Component {
             <Route path="/memberCenter/BasicInfo" component={BasicInfo} />
           </div>
           <Recipe_category/>
-          <Route path="/recipe_category" component={Recipe_category} />
+          <Route path="/recipe_category/:category" component={Recipe_category} />
+          {/* <Route path="/recipe_list" component={Recipe_list} />
+          <Route path="/recipe_page" component={Recipe_page} /> */}
         </React.Fragment>
       </BrowserRouter>
     );
