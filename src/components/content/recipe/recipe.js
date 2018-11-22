@@ -10,7 +10,7 @@ class Recipe extends Component {
         return (
             <React.Fragment>
                 <div className="recipe">
-                    <Link class="action-button shadow animate red upload_blog_img" to="#">上傳食譜</Link>
+                    <a class="action-button shadow animate red upload_blog_img" href="/up_load">上傳食譜</a>
                     <div className="recipe_text container">
                         <h1>My recipe</h1>
                         <p>最新食譜</p>

@@ -32,7 +32,7 @@ class Navbar extends Component {
                                 </li>
                             </ul>
                             <form className="form-inline my-2 my-lg-0 ml-auto">
-                            <img src={require("./icon/heart.png")} class="icon" alt="" />
+                            <Link to="/blog"><img src={require("./icon/heart.png")} class="icon" alt="" /></Link>
                             <img src={require("./icon/profile.png")} class="icon" alt="" />
                             <img src={require("./icon/shopping-bag.png")} class="icon" alt="" />
                                 <input className="form-control mr-sm-2" type="search" placeholder="" aria-label="Search" />

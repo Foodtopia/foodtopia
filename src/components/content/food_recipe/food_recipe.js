@@ -21,7 +21,7 @@ class Food_recipe extends Component {
     }
 
 //按下...計算下一組要產生的分頁數字
- btnIncrementClick = () => {
+btnIncrementClick = () => {
     this.setState({
         upperPageBound: this.state.upperPageBound + this.state.pageBound,
         lowerPageBound: this.state.lowerPageBound + this.state.pageBound
@@ -63,7 +63,7 @@ btnNextClick = () => {
 }
 
 componentDidMount() {
-    this.getProducts(1);  //顯示頁面1    componentDidMount -> 如果需要從遠程端點加載數據，實例化網絡請求
+    this.getProducts(1);  //顯示頁面1
 }
 
 componentDidUpdate() {  //頁面按鈕顯示狀態   componentDidUpdate -> 更新發生後立即調用
@@ -154,7 +154,7 @@ paging = e => {  //顯示頁數資料
         
         return (
             <React.Fragment>
-                <div className="recipe_diary row d-flex">
+                <div className="recipe_diary row d-flex" id="none">
                     {this.state.menus.map(menu =>  //menu -> 資料庫名稱
                         <div className="col-4">
                             <div className="food_recipe">
