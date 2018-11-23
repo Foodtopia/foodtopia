@@ -1,0 +1,46 @@
+$color_red: #FF4343;
+$color_grey: #404040;
+$color_light_grey: #c7c7c7;
+
+$title_size1: 2rem;
+$title_size2: 1.5rem;
+$p_size: 1.25rem;
+
+$title_fontWeight: 700;
+
+.search_wrap{
+    // border: 1px solid blue;
+    background-color: $color_light_grey;
+    border-radius: 5px;
+    padding: 10px;
+    .select_items_wrap{
+        // border: 1px solid red;
+        padding: 10px;
+        .select_item{
+            // border: 1px solid #000;
+            padding: 10px 30px;
+            font-size: 14px;
+        }
+        .dropdown-item{
+            margin-top: 10px;
+            font-size: 14px;
+        }
+        .search_input{
+            height: 45px;
+        }
+        .search_button{
+            font-size: 15px;
+            color: white;
+            background-color: $color_red;
+            padding: 10px 30px;
+            // border: 1.5px solid $color_red;
+            
+            &:hover{
+                background-color: rgb(206, 55, 55);
+                // color: $color_red;
+                // border: 1.5px solid $color_red;
+                
+            }
+        }
+    }
+}

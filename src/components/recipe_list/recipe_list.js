@@ -9,6 +9,7 @@ import Recommend from './recommend/recommend.js';
 import Day_rank from './rank/day_rank.js';
 import Product_slider from './product_slider/product_slider.js';
 import Product_slider_right from './product_slider/product_slider_right.js';
+import Search_bar from './search_bar/search_bar';
 // import Recipe_page from './recipe_page/recipe_page.js';
 
 
@@ -20,6 +21,9 @@ class Recipe_list extends Component {
         <React.Fragment>
           <div className="fadeIn head_slider">
             <Head_slider />   
+          </div>
+          <div className="search_bar">
+            <Search_bar />
           </div>
           
           <div className="middle_section container d-flex justify-content-center ">
