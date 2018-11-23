@@ -27,6 +27,39 @@ $title_fontWeight: 700;
             h1{
                 line-height: 5rem;
             }
+            .like_btn{
+                margin: 0 10px 0px 50px;
+                border: 1px solid $color_red;
+                padding: 5px;
+                width: 100px;
+                height: 40px;
+                border-radius: 5px;
+                background-color: #fff;
+                cursor: pointer;
+                &:hover{
+                    .like_img{
+                        display: none;
+                    }
+                    .liked_img{
+                        display: inline-block;
+                        margin-left: 25px;
+                        // text-align: center;
+                    }
+                    
+                }
+                .like_img{
+                    height: 25px;
+                }
+                .liked_img{
+                    display: none;
+                }
+                .like_text{
+                    font-size: 16px;
+                    line-height: 25px;
+                    margin-left: 10px;
+                }
+            }
+            
             .cook_info{
                 width: 100px;
                 height: 100px;
@@ -172,6 +205,25 @@ $title_fontWeight: 700;
     }
     .comment_area{
         margin: 10px;
+        .comment_input{
+            border: 1px solid $color_light_grey;
+            border-radius: 5px;
+            font-size: $p_size;
+            margin-top: 10px;
+            margin-right: 10px;
+            padding: 10px;
+            width: 500px;
+            height: 100px;
+            // color: $color_light_grey;
+        }
+        .comment_send{
+            // width: 60px;
+            // height: 40px;
+            font-size: 14px;
+            padding: 5px 20px;
+            // background-color: $color_red;
+            
+        }
         .user_name{
             font-size: $title_size2;
             font-weight: 700;

@@ -14,7 +14,14 @@ class Recipe_page extends Component {
             <header className=" container d-flex">
                 <img className="main_pic" src={require('./images/western_2_main.jpg')}/>
                 <div className="main_text">
+                  <div className="main_title d-flex">
                     <h1>大蒜奶油沙朗牛排佐帕瑪森起司馬鈴薯</h1>
+                    <div className="like_btn d-flex justify-content-center">
+                      <img className="like_img" src={require('./images/like.svg')}/>
+                      <img className="liked_img" src={require('./images/liked.svg')}/>
+                      <div className="like_text">收藏</div>
+                    </div>
+                  </div>
                     <h4>大蒜、香草、奶油溶入牛排中，帶出豐富有層次的口感，這種晚餐將會是一種享受。</h4>
                     <div className="cook_info_wrap d-flex">
                         <div className="cook_info ">
@@ -255,6 +262,18 @@ class Recipe_page extends Component {
           </main>
 
           {/* ---comment--- */}
+          <main className="comment_wrap d-flex container">
+            {/* <div className="comment_title">評論</div> */}
+            <img className="profile_pic" src={require("./images/foodtopia_profile_pic.png")} />
+            <div className="comment_area">
+              <span className="user_name"> Foodtopia</span>
+              {/* <span className="comment_time"> 2018-10-05 19:59</span> */}
+              <div className="d-flex align-items-end">
+                <textarea className="comment_input" placeholder="請在這裡輸入您對這個食譜的想法!"></textarea>
+                <button className="comment_send btn btn-primary" type="submit">送出</button>
+              </div>
+            </div>
+          </main>
           <main className="comment_wrap d-flex container">
             {/* <div className="comment_title">評論</div> */}
             <img className="profile_pic" src={require("./images/foodtopia_profile_pic.png")} />
