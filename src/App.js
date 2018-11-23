@@ -14,6 +14,14 @@ import MyOrder from './components/myOrder/myOrder.js';
 import MyService from './components/myService/MyService.js';
 import Footer from './components/footer/Footer.js';
 import HomePage from './components/homePage/HomePage.js';
+import Sec1 from "./components2/Sec1";
+import Sec2 from "./components2/Sec2";
+import Sec3_4 from "./components2/Sec3_4";
+import Sec5 from "./components2/Sec5";
+import Sec6 from "./components2/Sec6";
+import Sec7 from "./components2/Sec7";
+import Sec8 from "./components2/Sec8";
+
 
 
 class App extends Component {
@@ -25,7 +33,7 @@ class App extends Component {
           <Route path="/homePage" component={HomePage} />
           <Route path="/register" component={Register} />
           <Route path="/registerSuccessful" component={RegisterSuccessful} />
-          <div className="container d-flex">
+          <div className="container">
           <Route path="/order" component={Order} />
             <Route path="/memberCenter" component={MemberCenter} />
             <Route path="/memberCenter/BasicInfo" component={BasicInfo} />
@@ -33,6 +41,14 @@ class App extends Component {
             <Route path="/memberCenter/favorite" component={Favorite} />
             <Route path="/memberCenter/myOrder" component={MyOrder} />
             <Route path="/memberCenter/myService" component={MyService} />
+            <Sec1/>
+            <Sec2/>
+            <Sec3_4/>
+            <Sec5/>
+            <Sec6/>
+            <Sec7/>
+            <Sec5/>
+            <Sec8/>                  
           </div>
           <Footer/>
         </React.Fragment>
