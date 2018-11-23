@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link } from "react-router-dom";
 import "./product_slider.scss";
 // 引入json檔資料，並取名叫做menus
-import menus from "../recipe_list.json";
+import menus from "../../recipe_list.json";
 import $ from 'jquery';
 
 
