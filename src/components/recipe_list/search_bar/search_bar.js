@@ -147,12 +147,7 @@ class Search_bar extends Component {
     }
     changeCategory(document.getElementById("category-list").selectedIndex);
       
-    //method2
-    // function renew(index){
-    //   for(var i=0;i<sectors[index].length;i++)
-    //     document.myForm.member.options[i]=new Option(sectors[index][i], sectors[index][i]);	// 設定新選項
-    //   document.myForm.member.length=sectors[index].length;	// 刪除多餘的選項
-    // }
+   
     
   }
 }

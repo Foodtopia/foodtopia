@@ -1,0 +1,36 @@
+[
+    {"sector_id":1 ,"category_id": 1, "sector": "日韓料理"},
+    {"sector_id":2 ,"category_id": 1, "sector": "中式料理"},
+    {"sector_id":3 ,"category_id": 1, "sector": "台灣料理"},
+    {"sector_id":4 ,"category_id": 1, "sector": "西式料理"},
+    {"sector_id":5 ,"category_id": 1, "sector": "東南亞料理"},
+    {"sector_id":6 ,"category_id": 2, "sector": "蔬菜"},
+    {"sector_id":7 ,"category_id": 2, "sector": "肉類"},
+    {"sector_id":8 ,"category_id": 2, "sector": "海鮮"},
+    {"sector_id":9 ,"category_id": 2, "sector": "乳製品"},
+    {"sector_id":10 ,"category_id": 2, "sector": "水果"},
+    {"sector_id":11 ,"category_id": 2, "sector": "米"},
+    {"sector_id":12 ,"category_id": 2, "sector": "麵"},
+    {"sector_id":13 ,"category_id": 2, "sector": "蛋"},
+    {"sector_id":14 ,"category_id": 3, "sector": "15分鐘以下"},
+    {"sector_id":15 ,"category_id": 3, "sector": "30分鐘"},
+    {"sector_id":16 ,"category_id": 3, "sector": "45分鐘"},
+    {"sector_id":17 ,"category_id": 3, "sector": "60分鐘以上"},
+    {"sector_id":18 ,"category_id": 4, "sector": "蒸"},
+    {"sector_id":19 ,"category_id": 4, "sector": "煮"},
+    {"sector_id":20 ,"category_id": 4, "sector": "炒"},
+    {"sector_id":21 ,"category_id": 4, "sector": "炸"},
+    {"sector_id":22 ,"category_id": 4, "sector": "烤"},
+    {"sector_id":23 ,"category_id": 4, "sector": "熬"},
+    {"sector_id":24 ,"category_id": 5, "sector": "早午餐"},
+    {"sector_id":25 ,"category_id": 5, "sector": "素食"},
+    {"sector_id":26 ,"category_id": 5, "sector": "宵夜"},
+    {"sector_id":27 ,"category_id": 5, "sector": "野餐"},
+    {"sector_id":28 ,"category_id": 5, "sector": "派對"},
+    {"sector_id":29 ,"category_id": 5, "sector": "健康輕食"},
+    {"sector_id":30 ,"category_id": 5, "sector": "節慶"},
+    {"sector_id":31 ,"category_id": 5, "sector": "甜點"}
+
+]
+
+

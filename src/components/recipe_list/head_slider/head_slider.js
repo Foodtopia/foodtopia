@@ -58,7 +58,7 @@ class Head_slider extends Component {
         for (let $i=0; $i< slideCount; $i++){
             $("#slider").append(`<li><img src="/static/media/${sliderArray[$i]}" alt="" ></li>`);
             
-            // $("#slider").append(`<li><img src={require('./images/${sliderArray[$i]}')} /></li>`);
+            // $("#slider").append(`<li><img src='./images/${sliderArray[$i]}' /></li>`);
             $("#paging").append("<li></li>");
       };
 

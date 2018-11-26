@@ -14,11 +14,11 @@ class Recommend extends Component {
               <div className="container ">            
                 <div className="recm_wrap">
                   <h2 className="recm_title">每日推薦</h2>
-                  <Link to="/recipe_page">
-                    <div className="recipe_wrap">
-                      <img src={require('./images/recm_recipe.jpg')} />
-                    </div>
-                  </Link>
+                    <Link to="/recipe_page">
+                      <div className="recipe_wrap">
+                        <img src={require('./images/recm_recipe.jpg')} />
+                      </div>
+                    </Link>
                 </div>
               </div>
           </React.Fragment>
