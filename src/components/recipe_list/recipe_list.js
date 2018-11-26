@@ -18,7 +18,7 @@ import Recipe_category from "../recipe_category/recipe_category"
 class Recipe_list extends Component {
   render() {
     return (
-      <BrowserRouter>
+      // <BrowserRouter>
         <React.Fragment>
           {/* <div className="fadeIn head_slider">
             <Head_slider />   
@@ -46,7 +46,7 @@ class Recipe_list extends Component {
           
           </div>
         </React.Fragment>
-      </BrowserRouter>
+      // </BrowserRouter>
     );
   }
 }

@@ -17,7 +17,7 @@ class Recipe_category extends Component {
     }
   render() {
     return (
-      <BrowserRouter>
+    //   <BrowserRouter>
         <React.Fragment>
 
         {/* <nav aria-label="breadcrumb">
@@ -49,7 +49,7 @@ class Recipe_category extends Component {
         </div>
           
         </React.Fragment>
-      </BrowserRouter>
+    //   </BrowserRouter>
     );
   }
 }

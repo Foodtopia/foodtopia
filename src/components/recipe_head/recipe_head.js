@@ -13,7 +13,7 @@ import Search_bar from '../recipe_list/search_bar/search_bar';
 class Recipe_head extends Component {
   render() {
     return (
-      <BrowserRouter>
+      // <BrowserRouter>
         <React.Fragment>
           <div className="fadeIn head_slider">
             <Head_slider />   
@@ -24,7 +24,7 @@ class Recipe_head extends Component {
           
           
         </React.Fragment>
-      </BrowserRouter>
+      // </BrowserRouter>
     );
   }
 }

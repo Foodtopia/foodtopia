@@ -7,7 +7,7 @@ import "./recipe_page.scss";
 class Recipe_page extends Component {
   render() {
     return (
-      <BrowserRouter>
+      // <BrowserRouter>
         <React.Fragment>
           {/* ----header----- */}
           <main className="head_bg">
@@ -301,7 +301,7 @@ class Recipe_page extends Component {
           </main>
 
         </React.Fragment>
-      </BrowserRouter>
+      // </BrowserRouter>
     );
   }
 }

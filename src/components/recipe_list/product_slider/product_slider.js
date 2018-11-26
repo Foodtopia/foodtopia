@@ -19,7 +19,7 @@ class Product_slider extends Component {
     }
     render() {
         return (
-            <BrowserRouter>
+            // <BrowserRouter>
                 <React.Fragment>
                     <div className="p_slider_wrap container d-flex align-items-center">
                     <Route path="recipe_head/recipe_category" component={Recipe_category} />
@@ -58,7 +58,7 @@ class Product_slider extends Component {
                         
                     </div>
                 </React.Fragment>
-            </BrowserRouter>
+            // </BrowserRouter>
         );
       }
     //   可以改成CSS3
