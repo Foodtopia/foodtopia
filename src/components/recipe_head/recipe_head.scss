@@ -1,0 +1,25 @@
+.head_slider{
+  margin-bottom: 10px;
+  
+}
+.search_bar{
+  margin-bottom: 40px;
+}
+.middle_section{
+    margin-top: 50px;
+  }
+  .product_slider{
+    margin: 20px 0;
+  }
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+  
+    to {
+      opacity: 1;
+    }
+  }
+  .fadeIn {
+    animation: 1s fadeIn;
+  }

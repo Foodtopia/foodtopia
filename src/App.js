@@ -13,7 +13,7 @@ import BasicInfo from './components/basicInfo/BasicInfo.js';
 import Recipe_list from './components/recipe_list/recipe_list.js';
 import Recipe_page from './components/recipe_page/recipe_page';
 import Recipe_category from './components/recipe_category/recipe_category';
-import Search_bar from './components/recipe_list/search_bar/search_bar';
+import Recipe_head from './components/recipe_head/recipe_head';
 
 
 class App extends Component {
@@ -22,8 +22,12 @@ class App extends Component {
       <BrowserRouter>
         <React.Fragment>
           <Nav />
-          <Route path="/recipe_list" component={Recipe_list} />
+          
+          <Route path="/recipe_head" component={Recipe_head} />
+          <Route path="/recipe_head/recipe_list" component={Recipe_list} />
+          <Route path="/recipe_head/recipe_category" component={Recipe_category} />
           <Route path="/recipe_page" component={Recipe_page} />
+
           <Loginform />
           <Route path="/register" component={Register} />
           <Route path="/registerSuccessful" component={RegisterSuccessful} />
@@ -32,8 +36,7 @@ class App extends Component {
             <Route path="/memberCenter/BasicInfo" component={BasicInfo} />
           </div>
           {/* <Recipe_category/> */}
-          <Route path="/recipe_category" component={Recipe_category} />
-          <Route path="/search_bar" component={Search_bar} />
+          {/* <Route path="/Recipe_head" component={Recipe_head} /> */}
           {/* <Route path="/recipe_list" component={Recipe_list} />
           <Route path="/recipe_page" component={Recipe_page} /> */}
         </React.Fragment>

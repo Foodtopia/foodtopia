@@ -7,13 +7,13 @@ class Nav extends Component {
   constructor(props) {
     super(props);
   }
-  // clickHandler(){
-  //   var lightBox = document.getElementById('lightBox');
-  //     lightBox.style.display = 'flex';
-  //     setTimeout(function(){
-  //       lightBox.style.opacity = '1';
-  //     },100)
-  // }
+  clickHandler(){
+    // var lightBox = document.getElementById('lightBox');
+    //   lightBox.style.display = 'flex';
+    //   setTimeout(function(){
+    //     lightBox.style.opacity = '1';
+    //   },100)
+  }
   render() {
     return (
       <React.Fragment>
@@ -30,7 +30,7 @@ class Nav extends Component {
                   <Link className="nav-link" to="/">首頁<span className="sr-only">(current)</span></Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link" to="/recipe_list">美味食譜</Link>
+                  <Link className="nav-link" to="/recipe_head/recipe_list">美味食譜</Link>
                 </li>
                 <li className="nav-item">
                   <Link className="nav-link" to="/">生鮮食材</Link>
