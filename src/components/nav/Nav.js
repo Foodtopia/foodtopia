@@ -38,12 +38,11 @@ class Nav extends Component {
                   <Link class="nav-link" to="/">美味食譜</Link>
                 </li>
                 <li className="nav-item">
-                  <Link class="nav-link" to="/">生鮮食材</Link>
+                  <Link class="nav-link" to="/ingridient_hompage">新鮮食材</Link>
                 </li>
                 <li className="nav-item">
                   <Link class="nav-link" to="/">關於我們</Link>
                 </li>
-
               </ul>
               <img src={require('./icons/like.png')} />
               <Link to="/register">
