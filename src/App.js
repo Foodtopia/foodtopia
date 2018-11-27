@@ -14,7 +14,9 @@ import Recipe_list from './components/recipe_list/recipe_list.js';
 import Recipe_page from './components/recipe_page/recipe_page';
 import Recipe_category from './components/recipe_category/recipe_category';
 import Recipe_head from './components/recipe_head/recipe_head';
+import SimpleSlider from './components/SimpleSlider/simpleSlider';
 
+require('slick-carousel');
 
 class App extends Component {
   render() {
@@ -39,6 +41,7 @@ class App extends Component {
           {/* <Route path="/Recipe_head" component={Recipe_head} /> */}
           {/* <Route path="/recipe_list" component={Recipe_list} />
           <Route path="/recipe_page" component={Recipe_page} /> */}
+          {/* <SimpleSlider/> */}
         </React.Fragment>
       </BrowserRouter>
     );

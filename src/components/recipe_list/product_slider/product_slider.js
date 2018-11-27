@@ -15,8 +15,9 @@ class Product_slider extends Component {
         super(props);
         this.state = {
             menus: menus //設定初始值menus為引入的menus json檔
+            // menus: []
           }
-    }
+    };
     render() {
         return (
             // <BrowserRouter>
@@ -61,16 +62,18 @@ class Product_slider extends Component {
             // </BrowserRouter>
         );
       }
-    //   可以改成CSS3
-      componentDidMount = () => {
-        // console.log("didMount");
-        $('.category_pic').hover(function(){
-            $(this).fadeTo(500,0.3)
-           },function(){
-            $(this).fadeTo(500,1)
-           })
-      }
-
+    
+    //   componentDidMount(){
+    //     this.getMenus();
+    //   }
+    //   //call restful api
+    //   getMenus(){
+    //     fetch("http://localhost:3000/api/recipe/")
+    //     .then(res=>res.json())
+    //     .then(menus => this.setState({
+    //         menus: menus
+    //     }))
+    //   }
     }
 
 export default Product_slider;

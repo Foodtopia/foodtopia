@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Route, Link } from "react-router-dom";
 import "./recipe_category.scss";
-import menus from "../recipe.json";
+// import menus from "../recipe.json";
 
 // import Head_slider from '../head_slider/head_slider.js';
 
@@ -12,7 +12,8 @@ class Recipe_category extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            menus: menus //設定初始值menus為引入的menus json檔
+            // menus: menus //設定初始值menus為引入的menus json檔
+            menus: []
           }
     }
   render() {
@@ -33,7 +34,7 @@ class Recipe_category extends Component {
                 {this.state.menus.map(menu =>  //menu -> 資料庫名稱
                     <div className="p_card">
                         <div className="upper_card">
-                            <img className="card_pic" src ={require(`./images/${menu.menu_img}.png`)} alt="" />
+                            <img className="card_pic" src ={require(`../recipe_list/product_slider/images/${menu.menu_img}.png`)} alt="" />
                             <div className="rate title1">4.2</div>
                         </div>
                         <div className="lower_card">
@@ -51,6 +52,17 @@ class Recipe_category extends Component {
         </React.Fragment>
     //   </BrowserRouter>
     );
+  }
+  componentDidMount(){
+    this.getMenus();
+  }
+  //call restful api
+  getMenus(){
+    fetch("http://localhost:3000/api/recipe/")
+    .then(res=>res.json())
+    .then(menus => this.setState({
+        menus: menus
+    }))
   }
 }
 

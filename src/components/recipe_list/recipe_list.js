@@ -12,6 +12,7 @@ import Product_slider_right from './product_slider/product_slider_right.js';
 // import Search_bar from './search_bar/search_bar';
 import Recipe_page from '../recipe_page/recipe_page.js';
 import Recipe_category from "../recipe_category/recipe_category"
+import SimpleSlider from '../SimpleSlider/simpleSlider';
 
 
 
@@ -45,6 +46,7 @@ class Recipe_list extends Component {
             <Product_slider/>
           
           </div>
+          <SimpleSlider/>
         </React.Fragment>
       // </BrowserRouter>
     );
