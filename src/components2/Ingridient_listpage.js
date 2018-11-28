@@ -4,6 +4,7 @@ import "bootstrap/dist/js/bootstrap.bundle";
 import Sec2 from "./Sec2";
 
 
+
 class Ingridient_listpage extends React.Component {
   render() {
     return (
@@ -11,7 +12,7 @@ class Ingridient_listpage extends React.Component {
           <Sec2/>
           <h1>hello
             this is ingridient page test
-          </h1>
+          </h1>          
         </React.Fragment>
     )
   }

@@ -13,7 +13,6 @@ import Sec8 from "./Sec8";
 class Ingridient_homepage extends Component {
   render() {
     return (
-
         <React.Fragment>
             <Sec2/>
             <Sec1/>
@@ -24,7 +23,6 @@ class Ingridient_homepage extends Component {
             <Sec5/>
             <Sec8/>                  
         </React.Fragment>
-
     );
   }
 }
