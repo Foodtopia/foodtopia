@@ -2,21 +2,43 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import "./search_bar.scss";
 import $ from 'jquery';
+import Sectors from './sector.json';
+import Categories from './category.json';
+import SectorDropDown from './SectorDropDown';
+import CategoryDropDown from './CategoryDropDown';
+import Reactstrap_dropdown from './reactstrap';
+import Reactstrap_dropdown_section from './reactstrap_section';
+import { ButtonDropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
+
+
 
 class Search_bar extends Component {
   constructor(props) {
     super(props);
+    this.state = {
+      id:1
+    }
   }
+
+  categoryChangeHandler = (id) => {
+    //alert("category：" + id);
+    this.setState({
+      id:id
+    })
+  }
+  sectorChangeHandler = (id) => {
+    alert("sector:" + id)
+  }
+
   render() {
     return (
       <React.Fragment>
         <section className="container search_wrap">
           <main className="select_items_wrap d-flex">
-            {/* <div className="select_item col-2 mr-5 d-flex justify-content-between">
-                    <span className="select_title">大分類</span>
-                    <span className="select_btn">v</span>
-                  </div> */}
-            <div className="btn-group">
+            <CategoryDropDown changeHandler = {this.categoryChangeHandler} />
+            <SectorDropDown changeHandler = {this.sectorChangeHandler} categoryId={this.state.id} />            
+
+            {/* <div className="btn-group">
               <button
                 type="button"
                 className="btn btn-lg btn-secondary dropdown-toggle select_item mr-5"
@@ -39,12 +61,8 @@ class Search_bar extends Component {
                   食材分類
                 </a>
               </div>
-            </div>
-            {/* <div className="select_item col-2 mr-5 d-flex justify-content-between">
-              <span className="select_title">子分類</span>
-              <span className="select_btn">v</span>
             </div> */}
-            <div className="btn-group">
+            {/* <div className="btn-group">
               <button
                 type="button"
                 className="btn btn-lg btn-secondary dropdown-toggle select_item mr-5"
@@ -67,8 +85,8 @@ class Search_bar extends Component {
                   台灣料理
                 </a>
               </div>
-            </div>
-            <div className="btn-group">
+            </div> */}
+            {/* <div className="btn-group">
               <button
                 type="button"
                 className="btn btn-lg btn-secondary dropdown-toggle select_item mr-5 "
@@ -91,14 +109,9 @@ class Search_bar extends Component {
                   60分鐘以上
                 </a>
               </div>
-            </div>
-            {/* <div className="select_item col-2 mr-5 d-flex justify-content-between">
-              <span className="select_title">烹調時間</span>
-              <span className="select_btn">v</span>
             </div> */}
           </main>
           <main className="select_items_wrap d-flex input-group-lg">
-            {/* <input className="search_input" placeholder="請輸入食譜名稱"></input> */}
             <input
               type="text"
               className="form-control search_input"
@@ -108,44 +121,18 @@ class Search_bar extends Component {
           </main>
 
           {/* 動態選單 */}
-          {/* <form>
-            <p>請選擇分類</p>
-            <select id="category-list" onchange="changeCategory(this.selectedIndex)"></select>
-            <br/>
-                  <br/>
-                  <p>選擇子分類</p>
-            <select id="sector-list"></select>
-          </form> */}
+          {/* <CategoryDropDown changeHandler = {this.categoryChangeHandler} />
+          <SectorDropDown changeHandler = {this.sectorChangeHandler} categoryId={this.state.id} /> */}
+
+          {/* <Reactstrap_dropdown changeHandler = {this.categoryChangeHandler}/>
+          <Reactstrap_dropdown_section changeHandler = {this.sectorChangeHandler} categoryId={this.state.id}/> */}
+         
         </section>
       </React.Fragment>
     );
   }
   componentDidMount(){
-    // var categories=['異國料理','食材','烹調時間','烹飪方法'];
-    // var categorySelect=document.getElementById("category-list");
-    // var inner="";
-    // for(var i=0; i<categories.length; i++){
-    //   inner=inner+'<option >'+categories[i]+'</option>';
-    // }
-    // categorySelect.innerHTML=inner;
     
-    
-    // var sectors=new Array();
-    // sectors[0]=['日韓料理 ',' 中式料理' ,'台灣料理' ,'西式料理' ,'東南亞料理' ];
-    // sectors[1]=['蔬菜','肉類','海鮮','乳製品','水果','米','麵','蛋'];	
-    // sectors[2]=['15分鐘以內' ,'30分鐘','45分鐘','60分鐘以上'];	
-    // sectors[3]=['蒸','煮','烤','炸','熬'];
-    
-    // function changeCategory(index){
-    //   var Sinner="";
-    //   // for(var i=0;i<sectors[index].length;i++){
-    //   for(var i=0; i<sectors[index].length; i++){
-    //     Sinner=Sinner+'<option >'+sectors[index][i]+'</option>';
-    //   }
-    //   var sectorSelect=document.getElementById("sector-list");
-    //   sectorSelect.innerHTML=Sinner;
-    // }
-    // changeCategory(document.getElementById("category-list").selectedIndex);
       
    
     
