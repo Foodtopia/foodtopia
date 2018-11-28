@@ -7,7 +7,7 @@ class Fruit extends React.Component {
         <React.Fragment>
           <div className="sec5">
           <div className="b_container">
-          <h2>肉類</h2>
+          <h2>海鮮</h2>
 
             {/* 第一列 */}
             <div className="sec5_card_sec">

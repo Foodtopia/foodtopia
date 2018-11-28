@@ -14,10 +14,15 @@ import MyOrder from './components/myOrder/myOrder.js';
 import MyService from './components/myService/MyService.js';
 import Footer from './components/footer/Footer.js';
 import HomePage from './components/homePage/HomePage.js';
+
 import Ingridient_homepage from './components2/Ingridient_homepage';
 import Ingridient_listpage from './components2/Ingridient_listpage';
 import Fruit from "./components2/Fruit";
-
+import Meat from "./components2/Meat";
+import Vegetable from "./components2/Vegetable";
+import Seafood from "./components2/Seafood";
+import Dairy from "./components2/Dairy";
+import Other from "./components2/Other";
 
 class App extends Component {
   render() {
@@ -37,10 +42,16 @@ class App extends Component {
             <Route path="/memberCenter/myOrder" component={MyOrder} />
             <Route path="/memberCenter/myService" component={MyService} />
 
-          {/* 食材首頁 */}
+          {/* 食材 */}
           <Route path="/ingridient_hompage" component={Ingridient_homepage} />
           <Route path="/ingridient_listpage" component={Ingridient_listpage} />
           <Route path="/ingridient_listpage/fruit" component={Fruit} />
+          <Route path="/ingridient_listpage/meat" component={Meat} />
+          <Route path="/ingridient_listpage/vegetable" component={Vegetable} />
+          <Route path="/ingridient_listpage/other" component={Other} />
+          <Route path="/ingridient_listpage/seafood" component={Seafood} />
+          <Route path="/ingridient_listpage/dairy" component={Dairy} />
+
           </div>
           <Footer/>
         </React.Fragment>

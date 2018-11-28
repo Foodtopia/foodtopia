@@ -10,7 +10,7 @@ class Sec6 extends React.Component {
           <div className="sec6_left_content">
             <h2>活動名稱</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, tempore?</p>
-            <a href><button>Click me</button></a>
+            <button type="button" class="btn btn-info">Info</button>
           </div>
           <div className="sec6_right_img">
             {/* <img src="./image/test12.jpg" alt /> */}

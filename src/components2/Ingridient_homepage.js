@@ -15,8 +15,8 @@ class Ingridient_homepage extends Component {
     return (
 
         <React.Fragment>
-            <Sec1/>
             <Sec2/>
+            <Sec1/>
             <Sec3_4/>
             <Sec5/>
             <Sec6/>
