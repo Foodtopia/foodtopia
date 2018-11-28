@@ -49,16 +49,16 @@ class Head_slider extends Component {
         var slideNum=0, slideMove=0;
         var slideWidth=654
 
-        var sliderArray=["hero11.bdc3ed52.jpg", "hero22.2f80e7e9.jpg", "hero33.a4d5ccde.jpg"]; 
+        var sliderArray=["hero11.jpg", "hero22.jpg", "hero33.jpg"]; 
         
         var slideCount=sliderArray.length;
         var slideWrapper=slideWidth*slideCount;
         $(".slider_wrap").width(slideWrapper);
 
         for (let $i=0; $i< slideCount; $i++){
-            $("#slider").append(`<li><img src="/static/media/${sliderArray[$i]}" alt="" ></li>`);
+            // $("#slider").append(`<li><img src="/static/media/${sliderArray[$i]}" alt="" ></li>`);
             
-            // $("#slider").append(`<li><img src='./images/${sliderArray[$i]}' /></li>`);
+            $("#slider").append(`<li><img src='/images/${sliderArray[$i]}' /></li>`);
             $("#paging").append("<li></li>");
       };
 

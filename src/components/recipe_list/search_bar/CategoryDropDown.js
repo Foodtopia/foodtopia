@@ -31,7 +31,7 @@ class CategoryDropDown extends Component {
         </div> */}
         
         {/* 王老師原始碼 */}
-        <select onCh ange={this.change} value={this.state.value} className="select_box">
+        <select onChange={this.change} value={this.state.value} className="select_box">
             {Categories.map((category)=>{
                 let opt = <option key={category.category_id} value={category.category_id} className="select_options">
                         {category.category}
