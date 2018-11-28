@@ -67,7 +67,6 @@ class Footer extends Component {
             .then(data => {
                 alert(data.message);
                 this.getMembers();
-
             })
     }
     add = (member) => {
@@ -87,8 +86,8 @@ class Footer extends Component {
 
     //分類月份
     month = (evt) =>{
-        let month = evt.target.dataset.month;
-        this.props.month(month);
+        let month = evt.target.dataset.month; //data-month={upload.id}
+        this.props.month(month); //傳至content的month
     }
     
     render() {

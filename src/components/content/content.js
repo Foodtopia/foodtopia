@@ -7,7 +7,6 @@ import Food_recipe2 from "./food_recipe/food_recipe2";
 import Footer from "./footer/footer";
 import Preface from "./preface/preface";
 
-
 class Content extends Component {
     constructor(props) {
         super(props)
@@ -21,11 +20,20 @@ class Content extends Component {
             menu_img:"",
             Introduction:"",
         }
+        this.initState3 = {
+            id:"",
+            menu:"",
+            menu_img:"",
+            Introduction:"",
+        }
         this.state = {
+            id:"",
             updates: [],
             update: this.initState,
             uploads: [],
             upload: this.initState2,
+            menus: [],
+            menu: this.initState3,
             type: 'add',
             inputValue: '使用者の廚房',
             inputValue2: '歡迎來到我的廚房，一起來做美食吧!',
@@ -33,6 +41,7 @@ class Content extends Component {
     }
 
     componentDidMount() {
+        //recipe消失 recipe2出現
         var food_recipe_none = document.getElementById('food_recipe_none');
         var food_recipe = document.getElementById('food_recipe');
         food_recipe_none.addEventListener('click',function(){

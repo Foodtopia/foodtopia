@@ -9,6 +9,7 @@ class Food_recipe extends Component {
         super(props);
         this.state = {
             menus: [],
+            id:"",
             totalPage: 0,
             currentPage: 1,
             perPage: 6,  //一次6筆資料
@@ -151,15 +152,16 @@ getProducts(page) {
         if (isNextBtnActive !== 'disabled') {
         renderNextBtn = <div className="page_button"><a className="page_text_button" href='javascript:void(0)' id="btnNext" onClick={this.btnNextClick}><p>→</p></a></div>
         }
-        
+
+
         return (
             <React.Fragment>
                 <div className="recipe_diary row d-flex" id="none">
-                    {this.state.menus.map(menu =>  //menu -> 資料庫名稱
+                    {this.state.menus.map(menu =>  
                         <div className="col-4">
                             <div className="food_recipe">
                                 <div className="recipe_img">
-                                    <img src={require(`./img/${menu.menu_img}.jpg`)} alt="" />
+                                    <a href={`/page/${menu.id}`} ><img src={require(`./img/${menu.menu_img}.jpg`)} alt="" /></a>
                                     <div className="blog_recipe">
                                         <div className="blog_btn d-flex">
                                             <Link className="food_btn" to="/"><div className="change_btn"><p className="color">修改</p></div></Link>
