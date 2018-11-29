@@ -40,12 +40,12 @@ class React_search extends Component {
             return (
               <div className="p_card">
                 <div className="upper_card">
-                  <img className="card_pic" />
+                  <img className="card_pic" src={require(`../product_slider/images/${recipes.recipe.img}.png`)} />
                 </div>  
                 
                 <div className="lower_card">
                    <div className="search_result card_title title2">{recipes.recipe.name}</div>
-                   {/* <div className="card_text text ">{menus.Introduction}</div> */}
+                   <div className="card_text text ">{recipes.recipe.introduction}</div>
                   
                   
                  </div>
