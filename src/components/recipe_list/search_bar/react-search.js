@@ -38,18 +38,18 @@ class React_search extends Component {
           {/* <SearchInput className="search-input" onChange={this.searchUpdated} /> */}
           {filteredRecipes.map(recipes => {
             return (
-              // <div className="p_card">
-              //   <div className="upper_card">
-              //   <img className="card_pic" />
-              //   </div>  
+              <div className="p_card">
+                <div className="upper_card">
+                  <img className="card_pic" />
+                </div>  
                 
-              //   <div className="lower_card">
-                  <div className="search_result card_title title2">{recipes.recipe.name}</div>
-              //     <div className="card_text text ">{menus.Introduction}</div>
+                <div className="lower_card">
+                   <div className="search_result card_title title2">{recipes.recipe.name}</div>
+                   {/* <div className="card_text text ">{menus.Introduction}</div> */}
                   
                   
-              //   </div>
-              // </div>
+                 </div>
+               </div>
           
           )
         })}
