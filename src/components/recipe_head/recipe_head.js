@@ -7,7 +7,7 @@ import "./recipe_head.scss";
 import Head_slider from '../recipe_list/head_slider/head_slider.js';
 import Search_bar from '../recipe_list/search_bar/search_bar';
 // import Recipe_page from './recipe_page/recipe_page.js';
-
+// import React_search from '../recipe_list/search_bar/react-search';
 
 
 class Recipe_head extends Component {
@@ -20,7 +20,9 @@ class Recipe_head extends Component {
           </div>
           <div className="search_bar">
             <Search_bar />
+            
           </div>
+          {/* <React_search/> */}
           
           
         </React.Fragment>

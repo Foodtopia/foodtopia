@@ -5,6 +5,7 @@ import "./recipe_category.scss";
 
 // import Head_slider from '../head_slider/head_slider.js';
 // import InfiniteScroll from 'react-infinite-scroller';
+import React_search from '../recipe_list/search_bar/react-search';
 
 
 
@@ -23,13 +24,7 @@ class Recipe_category extends Component {
     //   <BrowserRouter>
         <React.Fragment>
 
-        {/* <nav aria-label="breadcrumb">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="#">首頁</a></li>
-                <li class="breadcrumb-item"><a href="#">食譜</a></li>
-                <li class="breadcrumb-item active" aria-current="page">中式料理</li>
-            </ol>
-        </nav> */}
+        <React_search/> 
         <div className="category_wrap container">
             <div className="c_category_title ">中式料理</div>
             <div className="cards d-flex flex-wrap">

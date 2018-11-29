@@ -43,7 +43,7 @@ class App extends Component {
           {/* <Route path="/recipe_list" component={Recipe_list} />
           <Route path="/recipe_page" component={Recipe_page} /> */}
           {/* <SimpleSlider/> */}
-          <React_search/>
+          {/* <React_search/> */}
         </React.Fragment>
       </BrowserRouter>
     );
