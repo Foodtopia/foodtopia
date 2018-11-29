@@ -29,6 +29,7 @@ class Login extends Component {
             if(res=='wrong'){
                 alert('此帳號不存在或密碼不正確');
             } else {
+                console.log(res)
                 registerFrom.submit();
             }
         })

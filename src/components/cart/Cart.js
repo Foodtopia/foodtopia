@@ -1,14 +1,14 @@
 import React, {Component} from 'react';
 import {Link} from "react-router-dom";
 import "./Cart.scss";
-import Products from "./Cart.json";
+// import Products from "./Cart.json";
 
 class Cart extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      products: Products,
+      products: [],
       product: {
         id: "",
         name: "",
@@ -17,32 +17,87 @@ class Cart extends Component {
         img: "",
         perPrice: ""
       },
-      amout: 0
+      amount: '',
+      email: ''
     }
-
   }
+
+  getSession = () => {
+    // session 使否已經登入判斷 用來讀取資料用
+    fetch('http://localhost:3000/session/info', {
+        method: 'GET',
+        credentials: 'include'
+      })
+      .then(function (res) {
+        return res.json();
+      })
+      .then((session) => {
+        if (session.login == 1) {
+          console.log('已經登入');
+          let email = session.email
+          this.setState({email: email})
+          this.getCart();
+        } else {
+          console.log('未登入');
+        }
+      })
+  }
+
+  getCart = () => {
+    fetch("http://localhost:3000/cart/cart", {
+      method: 'POST',
+      mode: "cors",
+      headers: {
+        'Content-Type': 'application/json'
+      },
+        body: JSON.stringify({email: this.state.email})
+      })
+      .then(res => res.json())
+      .then(cart => this.setState({products: cart}))
+      .then(cart => {
+        var amount = this
+          .state
+          .products
+          .reduce((amount, product) => (amount += product.price * product.qty), 0)
+        this.setState({amount: amount})
+      })
+  }
+
+  // getAmount = () => {
+  //   let products = this.state.products;
+  //   let amount = 0
+  //   for (let i = 0; i < products.length; i++) {
+  //     amount += products[i].price * products[i].qty
+  //   }
+  //   let amount = this
+  //     .state
+  //     .products
+  //     .reduce((amount, product) => (amount += product.price * product.qty), 0)
+  //   this.setState({amount: amount})
+  // }
+
   render() {
     return (
       <React.Fragment>
         <div id='cart' className='cart'>
           <div className='title'>購物車</div>
-          <div id='products'>
+          <div>
             {this
               .state
               .products
               .map(product => <div className='row my-2'>
                 <div className='col-5 productImg'>
-                  <img src={require(`${product.img}`)}/>
+                  <img src={require(`./images/${product.product_img}.jpeg`)}/>
                 </div>
                 <div className='col-7 productName'>
-                  <span>{product.name}</span><br/>
-                  <span>{product.note}</span>
+                  <span>{product.product_name}</span><br/>
+                  <span>{product.description}</span>
                 </div>
                 <div className='col-5 productNum'>
                   <span className='btnMinus'>
                     <i class="fas fa-minus"></i>
                   </span>
-                  <span>{product.num}</span>
+                  <span>{product.qty}</span>
                   <span className='btnPlus'>
                     <i className="fas fa-plus"></i>
                   </span>
@@ -50,7 +105,7 @@ class Cart extends Component {
                 <div className='col-7 productPrice'>
                   <span>NT$
                   </span>
-                  <span>{product.perPrice * product.num}</span>
+                  <span>{product.price * product.qty}</span>
                 </div>
               </div>)}
           </div>
@@ -58,12 +113,10 @@ class Cart extends Component {
             <hr className='line1'/>
           </div>
           <div className='totalPrice'>
-            <span>總計: NT$
+            <span>總計: NT$ {" "}
             </span>
-            <span>{this
-                .state
-                .products
-                .reduce((amout, product) => (amout += product.perPrice * product.num), 0)}</span>
+            <span>
+              {this.state.amount}</span>
           </div>
           <Link to='/order/step1'>
             <button
@@ -75,22 +128,13 @@ class Cart extends Component {
       </React.Fragment>
     );
   }
+
   componentDidMount() {
-    // console.log(this.initState);
-    // session 使否已經登入判斷 用來讀取資料用
-    fetch('http://localhost:3000/session/info', {
-      method: 'GET',
-      credentials: 'include'
-  }).then(function (res) {
-      console.log(res);
-      return res.json();
-    }).then((a) => {
-      if(a.login==1){
-        console.log('已經登入');
-      } else {
-        console.log('未登入');
-      }
-  })
+    this.getSession();
+  }
+
+  componentDidUpdate() {
+    console.log(this.state);
   }
 }
 
