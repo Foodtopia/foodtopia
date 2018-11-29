@@ -15,6 +15,7 @@ import Recipe_page from './components/recipe_page/recipe_page';
 import Recipe_category from './components/recipe_category/recipe_category';
 import Recipe_head from './components/recipe_head/recipe_head';
 import SimpleSlider from './components/SimpleSlider/simpleSlider';
+import React_search from './components/recipe_list/search_bar/react-search';
 
 require('slick-carousel');
 
@@ -42,6 +43,7 @@ class App extends Component {
           {/* <Route path="/recipe_list" component={Recipe_list} />
           <Route path="/recipe_page" component={Recipe_page} /> */}
           {/* <SimpleSlider/> */}
+          <React_search/>
         </React.Fragment>
       </BrowserRouter>
     );

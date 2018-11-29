@@ -4,7 +4,7 @@ import "./recipe_category.scss";
 // import menus from "../recipe.json";
 
 // import Head_slider from '../head_slider/head_slider.js';
-import InfiniteScroll from 'react-infinite-scroller';
+// import InfiniteScroll from 'react-infinite-scroller';
 
 
 

@@ -1,0 +1,110 @@
+$color_red: #FF4343;
+$color_grey: #404040;
+$color_light_grey: #c7c7c7;
+
+$title_size1: 2rem;
+$title_size2: 1.5rem;
+$p_size: 1.25rem;
+$title_fontWeight: 700;
+.search-input {
+    padding: 10px 10px;
+    height: 52px;
+    position: relative;
+    margin: 20px;
+  }
+  
+  .search-input::before {
+    content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAAAXNSR0IArs4c6QAAAQJJREFUKBWVkr2uQUEUhf3ET6GRaC5aFRoJKrf1BKpb8SwqovYGXkCj00k0QnRKEYkILYobvpUYmeMMyVnJl7P3mjN7Zu9zwiGv2qRFyMMSRrAFp6JPN8XzBj+wgDkUYAg7WINTYdwpDECxrRLJHeq2accdkgm8bzTvNAg2EDOGeUYI1KNO1gkuzTA1g8T7ojbn4ONQWPuHPWgeHmnzCqoe15tkSNPgPEAn68oVcOmA2XMtGK9FoE/VhOTTVNExqLCGZnxCv2pYauEC6lF0oQxX6IOvb7yX9NPEQafan+aPXDdQC18LsO6Tip5BBY6gIQaSbnMCFRCBZRcIvFkbsvCr4AFGOCxQy+JdGQAAAABJRU5ErkJggg==');
+    display: block;
+    position: absolute;
+    width: 15px;
+    z-index: 3;
+    height: 15px;
+    font-size: 20px;
+    top: 11px;
+    left: 16px;
+    line-height: 32px;
+    opacity: 0.6;
+  }
+  
+  .search-input > input {
+    width: 100%;
+    font-size: 15px;
+    border: none;
+    line-height: 22px;
+    padding: 5px 10px 5px 25px;
+    height: 32px;
+    position: relative;
+    margin-left: 10px;
+  }
+  
+  .search-input > input:focus {
+    outline: none;
+  }
+
+  .search_result{
+      margin: 0px 10px;
+      font-size: 14px;
+  }
+  .search_card{
+      border: 1px solid grey;
+      width: 200px;
+      height:300px;
+
+  }
+  .p_card{
+    width: 220px;
+    height: 300px;
+    border: 1px solid $color_light_grey;
+    border-radius: 10px;
+    margin: 20px ;
+    cursor: pointer;
+    .upper_card{
+        position: relative;
+        .card_pic{
+            width: 100%;
+            border-radius: 10px 10px 0 0;
+        }
+        .rate{
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            color: #ff0037;
+            background-color: rgba(255, 255, 255, 0.45);
+            border-radius: 50%;
+            padding: 10px;
+        }
+    }
+    .lower_card{
+        padding: 10px;
+        position: relative;
+        .card_title{
+            line-height: 3rem;
+        }
+        .card_text{
+            // color: blue;
+            // border: 1px solid #000;
+            height: 70px;
+            line-height: 2.2rem;
+            // 多行省略無法執行?
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 3;   
+            // 單行省略可以
+            // text-overflow : ellipsis;
+            // white-space : nowrap;              
+        }
+        .like_btn{
+            height: 20px;
+            position: absolute;
+            right: 50px;
+        }
+        .share_btn{
+            height: 20px;
+            position: absolute;
+            right: 20px;
+        }
+    }
+    
+}
