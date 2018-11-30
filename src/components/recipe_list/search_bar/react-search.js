@@ -27,14 +27,14 @@ class React_search extends Component {
       <div>
         <SearchInput
               type="text"
-              className="form-control search-input"
+              className="form-control search-input container"
               aria-label="Sizing example input"
               aria-describedby="inputGroup-sizing-default"
               onChange={this.searchUpdated}
               placeholder="請輸入食譜關鍵字"
               />
 
-        <div className="cards d-flex flex-wrap">
+        <div className="cards d-flex flex-wrap container">
           {/* <SearchInput className="search-input" onChange={this.searchUpdated} /> */}
           {filteredRecipes.map(recipes => {
             return (

@@ -11,7 +11,8 @@ $title_fontWeight: 700;
     padding: 10px 10px;
     height: 52px;
     position: relative;
-    margin: 20px;
+    // margin: 20px;
+    width: 100%;
   }
   
   .search-input::before {
@@ -44,15 +45,18 @@ $title_fontWeight: 700;
   }
 
   .search_result{
-      margin: 0px 10px;
+    //   margin: 0px 10px;
       font-size: 14px;
   }
-  .search_card{
-      border: 1px solid grey;
-      width: 200px;
-      height:300px;
+//   .search_card{
+//       border: 1px solid grey;
+//       width: 200px;
+//       height:300px;
 
-  }
+//   }
+.cards{
+    max-width: 1200px;
+}
   .p_card{
     width: 220px;
     height: 300px;
