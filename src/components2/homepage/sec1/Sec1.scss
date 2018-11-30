@@ -1,0 +1,41 @@
+$mainColor : #FF4343;
+
+.sec1{
+    width: 100%;
+    height: 100vh;
+    background-color: #ECF0FB;
+    //排版測試 background-color: $mainColor;
+    box-sizing: border-box;
+    margin: 5px;
+
+    .b_container{
+        width: 95%;
+        margin: 0 auto;
+        .bmain_img{
+            width: 100%;
+            height: 85vh;
+        }
+        .topicSec{
+            height: 15vh;
+            display: flex;
+            .daily_active{
+                width: 50%;
+                padding: 20px;
+                margin: 2px;    
+                background:  url(./image/test1.jpg) no-repeat;
+            }
+            .daily_recipies{
+                width: 25%;
+                padding: 20px;
+                margin: 2px;    
+                background:  url(./image/test2.jpg) no-repeat;
+            }
+            .ingridient_promo{
+                width: 25%;
+                padding: 20px;
+                margin: 2px;    
+                background:  url(./image/test3.jpg) no-repeat;
+            }
+        }
+    }
+}

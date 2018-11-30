@@ -1,0 +1,42 @@
+/* sec5 */
+.sec5{
+    width: 100%;
+    //排版測試 background-color: $mainColor;
+    box-sizing: border-box;
+    margin: 5px;
+    .b_container{
+        width: 95%;
+        margin: 0 auto;
+        h2{
+            text-align: center;
+        }
+        .sec5_card_sec{
+            display: flex;
+            //排版測試 background-color: pink;
+            text-align: center;
+            padding: 5px;
+            .sec5_card_item{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                padding: 5px;
+                h3{
+                    padding: 5px;
+                }
+                img{
+                    width: 50%;
+                    height: 50%;
+                }
+                .icon{
+                    width: 10%;
+                    height: 10%;
+                }                
+            }
+            .cardprice_bar{
+                display: flex;
+                justify-content: space-around;
+            }
+        }  
+    }
+} 
+

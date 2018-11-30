@@ -1,0 +1,22 @@
+/* sec2 */
+.sec2{
+    width: 100%;
+    //排版測試 background-color: gray;
+    box-sizing: border-box;
+    margin: 20px 5px;
+    .b_container{
+        width: 95%;
+        margin: 0 auto;
+        .bnav{
+            //排版測試 background-color: #fff;
+            justify-content: space-around;
+            .bnav-link{
+               //排版測試 background-color: rgb(66, 28, 28);
+                padding: 5px;
+            }
+        }
+        h2{
+            text-align: center;    
+        }
+    }
+}

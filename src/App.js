@@ -15,14 +15,15 @@ import MyService from './components/myService/MyService.js';
 import Footer from './components/footer/Footer.js';
 import HomePage from './components/homePage/HomePage.js';
 
-import Ingridient_homepage from './components2/Ingridient_homepage';
-import Ingridient_listpage from './components2/Ingridient_listpage';
-import Fruit from "./components2/Fruit";
-import Meat from "./components2/Meat";
-import Vegetable from "./components2/Vegetable";
-import Seafood from "./components2/Seafood";
-import Dairy from "./components2/Dairy";
-import Other from "./components2/Other";
+//食材元件匯入
+import Ingridient_homepage from './components2/homepage/Ingridient_homepage';
+import Ingridient_listpage from './components2/listpage/Ingridient_listpage';
+import Fruit from "./components2/listpage/Fruit/Fruit";
+import Meat from "./components2/listpage/Meat/Meat";
+import Vegetable from "./components2/listpage/Vegetable/Vegetable";
+import Seafood from "./components2/listpage/Seafood/Seafood";
+import Dairy from "./components2/listpage/Dairy/Dairy";
+import Other from "./components2/listpage/Other/Other";
 
 class App extends Component {
   render() {
