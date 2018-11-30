@@ -1,80 +1,51 @@
 import React, {Component} from 'react';
 import {Link} from "react-router-dom";
+import {Button, Container, Row, Col} from 'reactstrap';
 import "./Cart.scss";
 // import Products from "./Cart.json";
 
 class Cart extends Component {
   constructor(props) {
     super(props);
-
     this.state = {
       products: [],
+      amount: '',
+      email: '',
       product: {
         id: "",
         name: "",
         note: "",
-        num: "",
+        qty: "",
         img: "",
-        perPrice: ""
-      },
-      amount: '',
-      email: ''
+        price: ""
+      }
     }
   }
 
-  getSession = () => {
-    // session 使否已經登入判斷 用來讀取資料用
-    fetch('http://localhost:3000/session/info', {
-        method: 'GET',
-        credentials: 'include'
-      })
-      .then(function (res) {
-        return res.json();
-      })
-      .then((session) => {
-        if (session.login == 1) {
-          console.log('已經登入');
-          let email = session.email
-          this.setState({email: email})
-          this.getCart();
-        } else {
-          console.log('未登入');
-        }
-      })
-  }
-
   getCart = () => {
-    fetch("http://localhost:3000/cart/cart", {
-      method: 'POST',
-      mode: "cors",
-      headers: {
-        'Content-Type': 'application/json'
-      },
-        body: JSON.stringify({email: this.state.email})
-      })
-      .then(res => res.json())
-      .then(cart => this.setState({products: cart}))
-      .then(cart => {
-        var amount = this
-          .state
-          .products
-          .reduce((amount, product) => (amount += product.price * product.qty), 0)
-        this.setState({amount: amount})
-      })
+    // 先取得session.email，再撈取個人購物車
+    fetch('http://localhost:3000/session/info', {
+      method: 'GET',
+      credentials: 'include'
+    }).then(res => {
+      return res.json();
+    }).then(session => {
+      let email = session.email
+      fetch("http://localhost:3000/cart/cart", {
+        method: 'POST',
+        mode: "cors",
+        headers: {
+          'Content-Type': 'application/json'
+        },
+          body: JSON.stringify({email: email})
+        })
+        .then(res => res.json())
+        .then(cart => {
+          let amount = cart.reduce((amount, product) => (amount += product.price * product.qty), 0)
+          this.setState({products: cart, amount: amount, email: email})
+        })
+    })
   }
-
-  // getAmount = () => {
-  //   let products = this.state.products;
-  //   let amount = 0
-  //   for (let i = 0; i < products.length; i++) {
-  //     amount += products[i].price * products[i].qty
-  //   }
-  //   let amount = this
-  //     .state
-  //     .products
-  //     .reduce((amount, product) => (amount += product.price * product.qty), 0)
-  //   this.setState({amount: amount})
-  // }
 
   render() {
     return (
@@ -85,52 +56,54 @@ class Cart extends Component {
             {this
               .state
               .products
-              .map(product => <div className='row my-2'>
-                <div className='col-5 productImg'>
-                  <img src={require(`./images/${product.product_img}.jpeg`)}/>
-                </div>
-                <div className='col-7 productName'>
-                  <span>{product.product_name}</span><br/>
-                  <span>{product.description}</span>
-                </div>
-                <div className='col-5 productNum'>
-                  <span className='btnMinus'>
-                    <i class="fas fa-minus"></i>
-                  </span>
-                  <span>{product.qty}</span>
-                  <span className='btnPlus'>
-                    <i className="fas fa-plus"></i>
-                  </span>
-                </div>
-                <div className='col-7 productPrice'>
-                  <span>NT$
-                  </span>
-                  <span>{product.price * product.qty}</span>
-                </div>
-              </div>)}
+              .map(product => <Row className='my-2'>
+                <Col sm={5}>
+                  <Col>
+                    <img
+                      className='productImg'
+                      src={require(`./images/${product.product_img}.jpeg`)}/>
+                  </Col>
+                  <Col className='productQty'>
+                    <Button color='danger' className='btnMP'>
+                      <i className="fas fa-minus"></i>
+                    </Button>
+                      {product.qty}
+                    <Button color='danger' className='btnMP'>
+                      <i className="fas fa-plus"></i>
+                    </Button>
+                  </Col>
+                </Col>
+                <Col sm={7}>
+                  <Col className='productName'>{product.product_name}</Col>
+                  <Col className='productSpec'>{product.spec}</Col>
+                  <Col className='productPrice'>NT$ {product.price * product.qty}</Col>
+                </Col>
+
+              </Row>)}
           </div>
-          <div className='container'>
+          <Container>
             <hr className='line1'/>
-          </div>
-          <div className='totalPrice'>
-            <span>總計: NT$ {" "}
-            </span>
-            <span>
-              {this.state.amount}</span>
-          </div>
-          <Link to='/order/step1'>
-            <button
-              onClick={this.props.cartToggle}
-              type="submit"
-              class="btn btnCheckOut d-flex px-5">開始結帳</button>
-          </Link>
+          </Container>
+          <Col className='totalPrice'>
+            總計: NT$ {this.state.amount}
+          </Col>
+          <Row>
+            <Col sm={{
+              size: 6,
+              offset: 3
+            }}>
+              <Link to='/order/step1'>
+                <Button color='danger' onClick={this.props.cartToggle} className="btnCheckOut">結帳</Button>
+              </Link>
+            </Col>
+          </Row>
         </div>
       </React.Fragment>
     );
   }
 
   componentDidMount() {
-    this.getSession();
+    this.getCart();
   }
 
   componentDidUpdate() {
