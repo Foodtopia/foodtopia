@@ -1,0 +1,104 @@
+.fix_button{
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    background-color: #F53643;
+    border-radius: 50%;
+    position: fixed;
+    right:1%;
+    bottom: 25%;
+    font-family: "微軟正黑體";
+    p{
+        color: white;
+        text-align: center;
+        line-height: 45px;
+    }
+}
+.fix_div{
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    border: 2px solid #F53643;
+    border-radius: 50%;
+    position: fixed;
+    right:1%;
+    bottom: 25%;
+    font-family: "微軟正黑體";
+    .fix_div_modify{
+        border-bottom: 1px solid #707070;
+        padding-bottom: 5%;
+        margin-top: 8%;
+        text-align: center;
+        .header_modify{
+            width: 90%;
+            border: 0px;
+        }
+        .btn_modify{
+            margin-left: 75%;
+            margin-top: 5%;
+            border: 1px solid #F53643;
+            border-radius: 50px;
+            width: 20%;
+            cursor: pointer;
+            &:hover{
+                background: #F53643;
+                color: #fff;
+            }
+        }
+    }
+    .btn_3{
+        width: 100%;
+        .btn_modify_3{
+            width: 35%;
+            padding: 2%;
+            margin: 5% 0 0 10%;
+            border: 1px solid #F53643;
+            border-radius: 50px;
+            cursor: pointer;
+            text-align: center;
+            &:hover{
+                background: #F53643;
+                color: #fff;
+            }
+        }
+    }
+    .fix_div_modify_2{
+        border-bottom: 1px solid #707070;
+        padding-bottom: 5%;
+        margin-top: 8%;
+        text-align: center;
+        .header_modify{
+            width: 90%;
+            height: 10vh;
+            border: 0px;
+            resize:none;
+        }
+        .btn_modify{
+            margin-left: 75%;
+            margin-top: 2%;
+            border: 1px solid #F53643;
+            border-radius: 50px;
+            width: 20%;
+            cursor: pointer;
+            &:hover{
+                background: #F53643;
+                color: #fff;
+            }
+        }
+    }
+}
+.open{
+    width: 250px;
+    height: 400px;
+    background-color: #fff;
+    border: 2px solid #F53643;
+    border-radius: 25px;
+    transition: .5s ease-in;
+}
+.close{
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    border: 2px solid #F53643;
+    transition: .5s ease-out;
+}

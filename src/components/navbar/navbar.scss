@@ -3,6 +3,7 @@ $nav_text_color:red;
 nav{
     // width: 70vw;
     margin: 20px auto 0;
+    z-index: 2;
     .logo {
         color:$nav_text_color !important;
         font-size: 2em !important;

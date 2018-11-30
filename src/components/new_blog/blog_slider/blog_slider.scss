@@ -1,0 +1,47 @@
+// Header
+.background{
+    position: relative;
+    text-align: center;
+    margin-top: 3%;
+    .background_img{
+        margin-top: -15%;
+        width: 100%;
+        z-index: 1;
+    }
+}
+// 歡迎語
+.background_text{
+    width: 40%;
+    height: 35%;
+    position: absolute;
+    background: #fff;
+    border-radius: 30px;
+    opacity: .7;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-70%);
+    font-family: "微軟正黑體";
+    h2{
+        text-align: center;
+        margin-top: 2%;
+        font-size: 2em;
+        font-weight: 700;
+        color: black;
+    }
+    p{
+        width: 85%;
+        margin: 5% auto 0;
+        font-size: 1.5em;
+        font-weight: 700;
+        color: black;
+    }
+}
+// logo
+.foodtopia_logo{
+    .logo{
+        position: absolute;
+        top: 66.6%;
+        left: 15%;
+        transform: rotate(-45deg);
+    }
+}

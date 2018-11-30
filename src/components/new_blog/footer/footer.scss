@@ -1,0 +1,39 @@
+.footer_background{
+    width: 100%;
+    height: 30vh;
+    margin-top: 5%;
+    background: url(./img/re12.png) center center no-repeat;
+}
+.blog_footer_icon{
+    position: relative;
+    width: 60%;
+    margin: 0 auto;
+    .footer_icon{
+        width: 40%;
+        margin: 80px auto 0;
+        .icon{
+            margin: 0;
+            font-size: 30px;
+        }
+        .link_black{
+            color: black;
+        }
+        // .fa-facebook{
+        //     color: rgb(64, 64, 155);
+        // }
+        // .fa-youtube{
+        //     color: #F53643;
+        // }
+        // .fa-envelope{
+        //     color: red;
+        // }
+        // .fa-google-plus-g{
+        //     color: red;
+        // }
+        // .ig_icon{
+        //     width: 40px;
+        //     margin-top: -4px;
+        //     margin-right: -15px;
+        // }
+    }
+}

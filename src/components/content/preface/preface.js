@@ -23,7 +23,7 @@ class Preface extends Component {
         member:this.initState2
     }
     
-}
+    }
 
     updateInputValue = (evt) => {
         var input_data = evt.target.value;

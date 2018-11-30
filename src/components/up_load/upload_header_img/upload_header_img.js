@@ -510,57 +510,6 @@ componentDidMount(){
                             </div>
                         </div>
                     </div>
-                    <div className="upload_step">
-                        <div className="step_number_step d-flex">
-                            <from className="input_step_form col-4">
-                                <i class="fas fa-camera-retro camera_icon"></i>
-                                <div className="upload_camera"></div>
-                                <input type="file" className="step_img" />
-                            </from>
-                            <div className="upload_number_step d-flex col-8 ">
-                                <p className="step_number">2</p>
-                                <div className="step_icons">
-                                    <i class="step_icon far fa-trash-alt"></i>
-                                    <br />
-                                    <textarea className="step_introduction" placeholder="步驟敘述..."/>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="upload_step">
-                        <div className="step_number_step d-flex">
-                            <from className="input_step_form col-4">
-                                <i class="fas fa-camera-retro camera_icon"></i>
-                                <div className="upload_camera"></div>
-                                <input type="file" className="step_img" />
-                            </from>
-                            <div className="upload_number_step d-flex col-8 ">
-                                <p className="step_number">3</p>
-                                <div className="step_icons">
-                                    <i class="step_icon far fa-trash-alt"></i>
-                                    <br />
-                                    <textarea className="step_introduction" placeholder="步驟敘述..."/>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="upload_step">
-                        <div className="step_number_step d-flex">
-                            <from className="input_step_form col-4">
-                                <i class="fas fa-camera-retro camera_icon"></i>
-                                <div className="upload_camera"></div>
-                                <input type="file" className="step_img" />
-                            </from>
-                            <div className="upload_number_step d-flex col-8 ">
-                                <p className="step_number">4</p>
-                                <div className="step_icons">
-                                    <i class="step_icon far fa-trash-alt"></i>
-                                    <br />
-                                    <textarea className="step_introduction" placeholder="步驟敘述..."/>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
                 {/* 新增步驟 */}
                 <div className="input_step">
