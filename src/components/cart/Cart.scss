@@ -21,47 +21,76 @@ $mainColor : #FF4343;
     background-color: #555555;
   }
 
+  .productInfo {
+    line-height: 30px;
+    padding: 0px;
+  }
+
   .productImg {
-      border: 1px solid rgba(255, 255, 255, 0);
-      border-radius: 5px;
-      height: 60px;
+    border: 1px solid rgba(255, 255, 255, 0);
+    border-radius: 5px;
+    height: 60px;
+  }
+  .btnDelete{
+    margin: -8px 0 0 0;
+    background-color: #dc3545;
+    padding: 0;
+    line-height: 98px;
+    transition: .5s;
+    opacity: 0;
+    cursor: pointer;
+    i{
+      font-size: 1.25rem;
+      margin: 0 15px 0 0;
+    }
+    &:hover{
+      opacity: 1;
+    }
   }
 
   .productName {
     font-size: 1.25rem;
     text-align: left;
-    line-height: 40px;
-  }
-  .productSpec{
-    font-weight: normal;
-    text-align: left;
-    line-height: 20px;
-    color: #f0f0f0;
-  }
-  .productQty{
     padding: 0;
   }
 
-  .btnMP{
-    line-height: 30px;
-    padding: 0px 7px;
-    margin: 0px 5px;
-    background-color: rgba(255,255,255,0);
-    border: none;
-    &:hover{
-      background-color: #dc3545;
-      box-shadow: rgba(220, 53, 69, 0.5);
-      border: none;
-    }
-    &:focus{
-      box-shadow: none;
-    }
+  .productSpec {
+    font-weight: normal;
+    text-align: left;
+    color: #f0f0f0;
+    padding: 0;
   }
 
   .productPrice {
     text-align: left;
+    padding: 0;
+  }
+
+  .productQty {
+    padding: 0;
     line-height: 30px;
   }
+
+  .btnMP {
+    line-height: 30px;
+    padding: 0px 7px;
+    margin: 0px 5px;
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    transition: .5s;
+
+    &:hover {
+      background-color: #dc3545;
+      box-shadow: rgba(220, 53, 69, 0.5);
+      border: none;
+    }
+
+    &:focus {
+      box-shadow: none;
+    }
+  }
+
+
 
   .line1 {
     border-top: 1px solid #f8f9fa;

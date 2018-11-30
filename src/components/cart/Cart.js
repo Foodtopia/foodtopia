@@ -12,12 +12,8 @@ class Cart extends Component {
       amount: '',
       email: '',
       product: {
-        id: "",
-        name: "",
-        note: "",
+        sid: "",
         qty: "",
-        img: "",
-        price: ""
       }
     }
   }
@@ -56,7 +52,7 @@ class Cart extends Component {
             {this
               .state
               .products
-              .map(product => <Row className='my-2'>
+              .map(product => <Row key={product.sid} className='pt-2'>
                 <Col sm={5}>
                   <Col>
                     <img
@@ -64,19 +60,24 @@ class Cart extends Component {
                       src={require(`./images/${product.product_img}.jpeg`)}/>
                   </Col>
                   <Col className='productQty'>
-                    <Button color='danger' className='btnMP'>
+                    <Button color='danger' className='btnMP' data-id={product.sid} data-type="min" onClick={this.handler}>
                       <i className="fas fa-minus"></i>
                     </Button>
                       {product.qty}
-                    <Button color='danger' className='btnMP'>
+                    <Button color='danger' className='btnMP' data-id={product.sid} data-type="plus" onClick={this.handler}>
                       <i className="fas fa-plus"></i>
                     </Button>
                   </Col>
                 </Col>
-                <Col sm={7}>
+                <Col className='productInfo' sm={5}>
                   <Col className='productName'>{product.product_name}</Col>
                   <Col className='productSpec'>{product.spec}</Col>
                   <Col className='productPrice'>NT$ {product.price * product.qty}</Col>
+                </Col>
+                <Col className='btnDelete' sm={2}>
+                <span>
+                <i className="fas fa-trash-alt"></i>
+                </span>
                 </Col>
 
               </Row>)}
